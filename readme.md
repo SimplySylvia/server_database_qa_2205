@@ -1,5 +1,7 @@
 ## Todo
 
+- [ ] Review MVC + Base Server Setup
+
 - [ ] [Request Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 
 - [ ] [Cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)

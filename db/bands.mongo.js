@@ -19,6 +19,10 @@ const bandSchema = new mongoose.Schema({
 
 const Band = new mongoose.model("Band", bandSchema);
 
+/**
+ * @description Finds bands in mongodb and returns all
+ * @returns Mongodb Promise(err, data)
+ */
 const find = () => {
   return Band.find().exec();
 };

@@ -18,6 +18,11 @@ const submitBand = band => {
   axios({
     method: "POST",
     url: "http://localhost:1337/bands",
+    data: band,
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json;charset=UTF-8",
+    },
   })
     .then(res => {
       console.log(res);

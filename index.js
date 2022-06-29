@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 
 /* ==== Internal Modules === */
-const controllers = require("./controllers");
+const { generic, bands } = require("./controllers");
 const mongo = require("./db/bands.mongo");
 const mysql = require("./db/bands.mysql");
 
@@ -25,9 +25,11 @@ app.use(express.static(__dirname + "/client"));
 // app.method("url", controller(req,res,next))
 
 // test route to demo cors
-app.get("/test", function (req, res, next) {
-  res.json({ message: "Test Successful" });
-});
+app.get("/test", generic.test);
+
+// band test
+
+app.get("/bands/test", bands.test);
 
 // v1 band routes mongo
 

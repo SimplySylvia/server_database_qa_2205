@@ -24,11 +24,11 @@ const Band = new mongoose.model("Band", bandSchema);
  * @returns Mongodb Promise(err, data)
  */
 const find = () => {
-  return Band.find().exec();
+  return Band.find();
 };
 
 const create = data => {
-  return Band.create(data).exec();
+  return Band.create(data);
 };
 
 module.exports = {
